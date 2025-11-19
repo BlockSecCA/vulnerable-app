@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014-2026 Bjoern Kimminich & the OWASP Juice Shop contributors.
+ * Copyright (c) 2014-2026 UserE Kimminich & the Security Project Vulnerable App contributors.
  * SPDX-License-Identifier: MIT
  */
 
@@ -39,7 +39,7 @@ describe('verify', () => {
       security.authenticatedUsers.put('token12345', {
         data: {
           id: 42,
-          email: 'test@juice-sh.op'
+          email: 'test@webapp.test'
         } as unknown as UserModel
       })
       challenges.forgedFeedbackChallenge = { solved: false, save } as unknown as Challenge
@@ -85,7 +85,7 @@ describe('verify', () => {
   describe('accessControlChallenges', () => {
     it('"scoreBoardChallenge" is solved when the 1px.png transpixel is requested', () => {
       challenges.scoreBoardChallenge = { solved: false, save } as unknown as Challenge
-      req.url = 'http://juice-sh.op/public/images/padding/1px.png'
+      req.url = 'http://webapp.test/public/images/padding/1px.png'
 
       verify.accessControlChallenges()(req, res, next)
 
@@ -94,7 +94,7 @@ describe('verify', () => {
 
     it('"adminSectionChallenge" is solved when the 19px.png transpixel is requested', () => {
       challenges.adminSectionChallenge = { solved: false, save } as unknown as Challenge
-      req.url = 'http://juice-sh.op/public/images/padding/19px.png'
+      req.url = 'http://webapp.test/public/images/padding/19px.png'
 
       verify.accessControlChallenges()(req, res, next)
 
@@ -103,7 +103,7 @@ describe('verify', () => {
 
     it('"tokenSaleChallenge" is solved when the 56px.png transpixel is requested', () => {
       challenges.tokenSaleChallenge = { solved: false, save } as unknown as Challenge
-      req.url = 'http://juice-sh.op/public/images/padding/56px.png'
+      req.url = 'http://webapp.test/public/images/padding/56px.png'
 
       verify.accessControlChallenges()(req, res, next)
 
@@ -112,7 +112,7 @@ describe('verify', () => {
 
     it('"extraLanguageChallenge" is solved when the Klingon translation file is requested', () => {
       challenges.extraLanguageChallenge = { solved: false, save } as unknown as Challenge
-      req.url = 'http://juice-sh.op/public/i18n/tlh_AA.json'
+      req.url = 'http://webapp.test/public/i18n/tlh_AA.json'
 
       verify.accessControlChallenges()(req, res, next)
 
@@ -122,7 +122,7 @@ describe('verify', () => {
     it('"retrieveBlueprintChallenge" is solved when the blueprint file is requested', () => {
       challenges.retrieveBlueprintChallenge = { solved: false, save } as unknown as Challenge
       setRetrieveBlueprintChallengeFile('test.dxf')
-      req.url = 'http://juice-sh.op/public/images/products/test.dxf'
+      req.url = 'http://webapp.test/public/images/products/test.dxf'
 
       verify.accessControlChallenges()(req, res, next)
 
@@ -131,7 +131,7 @@ describe('verify', () => {
 
     it('"missingEncodingChallenge" is solved when the crazy cat photo is requested', () => {
       challenges.missingEncodingChallenge = { solved: false, save } as unknown as Challenge
-      req.url = 'http://juice-sh.op/public/images/uploads/%E1%93%9A%E1%98%8F%E1%97%A2-%23zatschi-%23whoneedsfourlegs-1572600969477.jpg'
+      req.url = 'http://webapp.test/public/images/uploads/%E1%93%9A%E1%98%8F%E1%97%A2-%23zatschi-%23whoneedsfourlegs-1572600969477.jpg'
 
       verify.accessControlChallenges()(req, res, next)
 
@@ -140,7 +140,7 @@ describe('verify', () => {
 
     it('"accessLogDisclosureChallenge" is solved when any server access log file is requested', () => {
       challenges.accessLogDisclosureChallenge = { solved: false, save } as unknown as Challenge
-      req.url = 'http://juice-sh.op/support/logs/access.log.2019-01-15'
+      req.url = 'http://webapp.test/support/logs/access.log.2019-01-15'
 
       verify.accessControlChallenges()(req, res, next)
 
@@ -255,10 +255,10 @@ describe('verify', () => {
       challenges.jwtForgedChallenge = { solved: false, save } as unknown as Challenge
     })
 
-    it('"jwtUnsignedChallenge" is solved when forged unsigned token has email jwtn3d@juice-sh.op in the payload', () => {
+    it('"jwtUnsignedChallenge" is solved when forged unsigned token has email jwtn3d@webapp.test in the payload', () => {
       /*
       Header: { "alg": "none", "typ": "JWT" }
-      Payload: { "data": { "email": "jwtn3d@juice-sh.op" }, "iat": 1508639612, "exp": 9999999999 }
+      Payload: { "data": { "email": "jwtn3d@webapp.test" }, "iat": 1508639612, "exp": 9999999999 }
        */
       req.headers = { authorization: 'Bearer eyJhbGciOiJub25lIiwidHlwIjoiSldUIn0.eyJkYXRhIjp7ImVtYWlsIjoiand0bjNkQGp1aWNlLXNoLm9wIn0sImlhdCI6MTUwODYzOTYxMiwiZXhwIjo5OTk5OTk5OTk5fQ.' }
 
@@ -279,8 +279,8 @@ describe('verify', () => {
       expect(challenges.jwtUnsignedChallenge.solved).to.equal(true)
     })
 
-    it('"jwtUnsignedChallenge" is not solved via regularly signed token even with email jwtn3d@juice-sh.op in the payload', () => {
-      const token = security.authorize({ data: { email: 'jwtn3d@juice-sh.op' } })
+    it('"jwtUnsignedChallenge" is not solved via regularly signed token even with email jwtn3d@webapp.test in the payload', () => {
+      const token = security.authorize({ data: { email: 'jwtn3d@webapp.test' } })
       req.headers = { authorization: `Bearer ${token}` }
 
       verify.jwtChallenges()(req, res, next)
@@ -289,10 +289,10 @@ describe('verify', () => {
     })
 
     if (utils.isChallengeEnabled(challenges.jwtForgedChallenge)) {
-      it('"jwtForgedChallenge" is solved when forged token HMAC-signed with public RSA-key has email rsa_lord@juice-sh.op in the payload', () => {
+      it('"jwtForgedChallenge" is solved when forged token HMAC-signed with public RSA-key has email rsa_lord@webapp.test in the payload', () => {
         /*
         Header: { "alg": "HS256", "typ": "JWT" }
-        Payload: { "data": { "email": "rsa_lord@juice-sh.op" }, "iat": 1508639612, "exp": 9999999999 }
+        Payload: { "data": { "email": "rsa_lord@webapp.test" }, "iat": 1508639612, "exp": 9999999999 }
          */
         req.headers = { authorization: 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJkYXRhIjp7ImVtYWlsIjoicnNhX2xvcmRAanVpY2Utc2gub3AifSwiaWF0IjoxNTgyMjIxNTc1fQ.ycFwtqh4ht4Pq9K5rhiPPY256F9YCTIecd4FHFuSEAg' }
 
@@ -313,8 +313,8 @@ describe('verify', () => {
         expect(challenges.jwtForgedChallenge.solved).to.equal(true)
       })
 
-      it('"jwtForgedChallenge" is not solved when token regularly signed with private RSA-key has email rsa_lord@juice-sh.op in the payload', () => {
-        const token = security.authorize({ data: { email: 'rsa_lord@juice-sh.op' } })
+      it('"jwtForgedChallenge" is not solved when token regularly signed with private RSA-key has email rsa_lord@webapp.test in the payload', () => {
+        const token = security.authorize({ data: { email: 'rsa_lord@webapp.test' } })
         req.headers = { authorization: `Bearer ${token}` }
 
         verify.jwtChallenges()(req, res, next)

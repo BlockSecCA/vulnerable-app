@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014-2026 Bjoern Kimminich & the OWASP Juice Shop contributors.
+ * Copyright (c) 2014-2026 UserE Kimminich & the Security Project Vulnerable App contributors.
  * SPDX-License-Identifier: MIT
  */
 
@@ -15,7 +15,7 @@ beforeAll(() => {
   return frisby.post(`${URL}/rest/user/login`, {
     headers: jsonHeader,
     body: {
-      email: 'jim@juice-sh.op',
+      email: 'usera@webapp.test',
       password: 'ncc-1701'
     }
   })
@@ -40,7 +40,7 @@ describe('/profile', () => {
     })
       .expect('status', 200)
       .expect('header', 'content-type', /text\/html/)
-      .expect('bodyContains', 'id="email" type="email" name="email" value="jim@juice-sh.op"')
+      .expect('bodyContains', 'id="email" type="email" name="email" value="usera@webapp.test"')
   })
 
   it('POST update username of authenticated user', () => {

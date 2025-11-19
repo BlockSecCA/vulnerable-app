@@ -1,5 +1,5 @@
 application:
-  logo: JuiceShopCTF_Logo.png
+  logo: VulnerableAppCTF_Logo.png
   favicon: favicon_ctf.ico
   showVersionNumber: false
   showGitHubLinks: false
@@ -10,7 +10,3 @@ challenges:
   showHints: false
   safetyMode: disabled
   showFeedbackButtons: false
-hackingInstructor:
-  isEnabled: false
-ctf:
-  showFlagsInNotifications: true

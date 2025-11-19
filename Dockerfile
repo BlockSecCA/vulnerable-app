@@ -1,6 +1,6 @@
 FROM node:22 AS installer
-COPY . /juice-shop
-WORKDIR /juice-shop
+COPY . /webapp
+WORKDIR /webapp
 RUN npm i -g typescript ts-node
 RUN npm install --omit=dev --unsafe-perm
 RUN npm dedupe --omit=dev
@@ -22,20 +22,17 @@ RUN npm run sbom
 FROM gcr.io/distroless/nodejs22-debian12
 ARG BUILD_DATE
 ARG VCS_REF
-LABEL maintainer="Bjoern Kimminich <bjoern.kimminich@owasp.org>" \
-    org.opencontainers.image.title="OWASP Juice Shop" \
-    org.opencontainers.image.description="Probably the most modern and sophisticated insecure web application" \
-    org.opencontainers.image.authors="Bjoern Kimminich <bjoern.kimminich@owasp.org>" \
-    org.opencontainers.image.vendor="Open Worldwide Application Security Project" \
-    org.opencontainers.image.documentation="https://help.owasp-juice.shop" \
+LABEL maintainer="Security Training Lab" \
+    org.opencontainers.image.title="Vulnerable Web Application" \
+    org.opencontainers.image.description="Intentionally vulnerable web application for security testing" \
+    org.opencontainers.image.authors="Security Training Lab" \
+    org.opencontainers.image.vendor="Security Training Lab" \
     org.opencontainers.image.licenses="MIT" \
     org.opencontainers.image.version="19.1.1" \
-    org.opencontainers.image.url="https://owasp-juice.shop" \
-    org.opencontainers.image.source="https://github.com/juice-shop/juice-shop" \
     org.opencontainers.image.revision=$VCS_REF \
     org.opencontainers.image.created=$BUILD_DATE
-WORKDIR /juice-shop
-COPY --from=installer --chown=65532:0 /juice-shop .
+WORKDIR /webapp
+COPY --from=installer --chown=65532:0 /webapp .
 USER 65532
 EXPOSE 3000
-CMD ["/juice-shop/build/app.js"]
+CMD ["/webapp/build/app.js"]

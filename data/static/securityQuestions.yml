@@ -1,6 +1,6 @@
-# vuln-code-snippet start resetPasswordBjoernOwaspChallenge resetPasswordBjoernChallenge resetPasswordJimChallenge resetPasswordBenderChallenge resetPasswordUvoginChallenge
-- # vuln-code-snippet neutral-line resetPasswordJimChallenge
-  question: 'Your eldest siblings middle name?' # vuln-code-snippet vuln-line resetPasswordJimChallenge
+# vuln-code-snippet start resetPasswordUser0OwaspChallenge resetPasswordUser0Challenge resetPasswordUser4Challenge resetPasswordUser1Challenge resetPasswordUser2Challenge
+- # vuln-code-snippet neutral-line resetPasswordUser4Challenge
+  question: 'Your eldest siblings middle name?' # vuln-code-snippet vuln-line resetPasswordUser4Challenge
 -
   question: "Mother's maiden name?"
 -
@@ -11,20 +11,20 @@
   question: "Maternal grandmother's first name?"
 -
   question: "Paternal grandmother's first name?"
-- # vuln-code-snippet neutral-line resetPasswordBjoernOwaspChallenge
-  question: 'Name of your favorite pet?' # vuln-code-snippet vuln-line resetPasswordBjoernOwaspChallenge
+- # vuln-code-snippet neutral-line resetPasswordUser0OwaspChallenge
+  question: 'Name of your favorite pet?' # vuln-code-snippet vuln-line resetPasswordUser0OwaspChallenge
 -
   question: "Last name of dentist when you were a teenager? (Do not include 'Dr.')"
-- # vuln-code-snippet neutral-line resetPasswordBjoernChallenge
-  question: 'Your ZIP/postal code when you were a teenager?' # vuln-code-snippet vuln-line resetPasswordBjoernChallenge
-- # vuln-code-snippet neutral-line resetPasswordBenderChallenge
-  question: 'Company you first work for as an adult?' # vuln-code-snippet vuln-line resetPasswordBenderChallenge
+- # vuln-code-snippet neutral-line resetPasswordUser0Challenge
+  question: 'Your ZIP/postal code when you were a teenager?' # vuln-code-snippet vuln-line resetPasswordUser0Challenge
+- # vuln-code-snippet neutral-line resetPasswordUser1Challenge
+  question: 'Company you first work for as an adult?' # vuln-code-snippet vuln-line resetPasswordUser1Challenge
 -
   question: 'Your favorite book?'
-- # vuln-code-snippet neutral-line resetPasswordUvoginChallenge
-  question: 'Your favorite movie?' # vuln-code-snippet vuln-line resetPasswordUvoginChallenge
+- # vuln-code-snippet neutral-line resetPasswordUser2Challenge
+  question: 'Your favorite movie?' # vuln-code-snippet vuln-line resetPasswordUser2Challenge
 -
   question: 'Number of one of your customer or ID cards?'
 -
   question: "What's your favorite place to go hiking?"
-# vuln-code-snippet end resetPasswordBjoernOwaspChallenge resetPasswordBjoernChallenge resetPasswordJimChallenge resetPasswordBenderChallenge resetPasswordUvoginChallenge
+# vuln-code-snippet end resetPasswordUser0OwaspChallenge resetPasswordUser0Challenge resetPasswordUser4Challenge resetPasswordUser1Challenge resetPasswordUser2Challenge

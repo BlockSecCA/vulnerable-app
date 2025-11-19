@@ -9,11 +9,11 @@ describe('/#/forgot-password', () => {
     cy.intercept('GET', '/rest/user/security-question?email=*').as('securityQuestion')
   })
 
-  describe('as Jim', () => {
+  describe('as UserA', () => {
     it('should be able to reset password with his security answer', () => {
       cy.task<string>('GetFromConfig', 'application.domain').then(
         (appDomain: string) => {
-          cy.get('#email').type(`jim@${appDomain}`)
+          cy.get('#email').type(`usera@${appDomain}`)
         }
       )
       cy.wait('@securityQuestion')
@@ -24,15 +24,15 @@ describe('/#/forgot-password', () => {
       cy.get('#resetButton').click()
 
       cy.get('.confirmation').should('not.be.hidden')
-      cy.expectChallengeSolved({ challenge: "Reset Jim's Password" })
+      cy.expectChallengeSolved({ challenge: "Reset UserA's Password" })
     })
   })
 
-  describe('as Bender', () => {
+  describe('as UserB', () => {
     it('should be able to reset password with his security answer', () => {
       cy.task<string>('GetFromConfig', 'application.domain').then(
         (appDomain: string) => {
-          cy.get('#email').type(`bender@${appDomain}`)
+          cy.get('#email').type(`userb@${appDomain}`)
         }
       )
       cy.wait('@securityQuestion')
@@ -43,11 +43,11 @@ describe('/#/forgot-password', () => {
       cy.get('#resetButton').click()
 
       cy.get('.confirmation').should('not.be.hidden')
-      cy.expectChallengeSolved({ challenge: "Reset Bender's Password" })
+      cy.expectChallengeSolved({ challenge: "Reset UserB's Password" })
     })
   })
 
-  describe('as Bjoern', () => {
+  describe('as UserE', () => {
     describe('for his internal account', () => {
       it('should be able to reset password with his security answer', () => {
         cy.task<string>('GetFromConfig', 'application.domain').then(
@@ -63,11 +63,11 @@ describe('/#/forgot-password', () => {
         cy.get('#resetButton').click()
 
         cy.get('.confirmation').should('not.be.hidden')
-        cy.expectChallengeSolved({ challenge: "Reset Bjoern's Password" })
+        cy.expectChallengeSolved({ challenge: "Reset UserE's Password" })
       })
     })
 
-    describe('for his OWASP account', () => {
+    describe('for his Security Project account', () => {
       it('should be able to reset password with his security answer', () => {
         cy.get('#email').type('bjoern@owasp.org')
         cy.wait('@securityQuestion')
@@ -78,12 +78,12 @@ describe('/#/forgot-password', () => {
         cy.get('#resetButton').click()
 
         cy.get('.confirmation').should('not.be.hidden')
-        cy.expectChallengeSolved({ challenge: "Bjoern's Favorite Pet" })
+        cy.expectChallengeSolved({ challenge: "UserE's Favorite Pet" })
       })
     })
   })
 
-  describe('as Morty', () => {
+  describe('as UserC', () => {
     it('should be able to reset password with his security answer', () => {
       cy.task<string>('GetFromConfig', 'application.domain').then(
         (appDomain: string) => {
@@ -98,11 +98,11 @@ describe('/#/forgot-password', () => {
       cy.get('#resetButton').click()
 
       cy.get('.confirmation').should('not.be.hidden')
-      cy.expectChallengeSolved({ challenge: "Reset Morty's Password" })
+      cy.expectChallengeSolved({ challenge: "Reset UserC's Password" })
     })
   })
 
-  describe('as Uvogin', () => {
+  describe('as UserD', () => {
     it('should be able to reset password with his security answer', () => {
       cy.task<string>('GetFromConfig', 'application.domain').then(
         (appDomain: string) => {
@@ -117,7 +117,7 @@ describe('/#/forgot-password', () => {
       cy.get('#resetButton').click()
 
       cy.get('.confirmation').should('not.be.hidden')
-      cy.expectChallengeSolved({ challenge: "Reset Uvogin's Password" })
+      cy.expectChallengeSolved({ challenge: "Reset UserD's Password" })
     })
   })
 })

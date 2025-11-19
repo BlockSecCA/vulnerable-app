@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014-2026 Bjoern Kimminich & the OWASP Juice Shop contributors.
+ * Copyright (c) 2014-2026 UserE Kimminich & the Security Project Vulnerable App contributors.
  * SPDX-License-Identifier: MIT
  */
 
@@ -35,7 +35,7 @@ describe('WebSocket', () => {
     socket.emit('notification received', 'Place an order that makes you rich.')
     socket.emit('notification received', 'Access a confidential document.')
     socket.emit('notification received', 'Access a salesman\'s forgotten backup file.')
-    socket.emit('notification received', 'Change Bender\'s password into slurmCl4ssic.')
+    socket.emit('notification received', 'Change UserB\'s password into slurmCl4ssic.')
     socket.emit('notification received', 'Apply some advanced cryptanalysis to find the real easter egg.')
     done()
   })

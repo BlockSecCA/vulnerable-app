@@ -10,7 +10,7 @@ describe('/#/login', () => {
       cy.get('#loginButton').click()
     })
 
-    it('should log in Admin with SQLI attack on email field using "admin@<juice-sh.op>\'--"', () => {
+    it('should log in Admin with SQLI attack on email field using "admin@<webapp.test>\'--"', () => {
       cy.task<string>('GetFromConfig', 'application.domain').then(
         (appDomain: string) => {
           cy.get('#email').type(`admin@${appDomain}'--`)
@@ -23,28 +23,28 @@ describe('/#/login', () => {
   })
 
   describe('challenge "loginJim"', () => {
-    it('should log in Jim with SQLI attack on email field using "jim@<juice-sh.op>\'--"', () => {
+    it('should log in UserA with SQLI attack on email field using "usera@<webapp.test>\'--"', () => {
       cy.task<string>('GetFromConfig', 'application.domain').then(
         (appDomain: string) => {
-          cy.get('#email').type(`jim@${appDomain}'--`)
+          cy.get('#email').type(`usera@${appDomain}'--`)
           cy.get('#password').type('a')
           cy.get('#loginButton').click()
         }
       )
-      cy.expectChallengeSolved({ challenge: 'Login Jim' })
+      cy.expectChallengeSolved({ challenge: 'Login UserA' })
     })
   })
 
   describe('challenge "loginBender"', () => {
-    it('should log in Bender with SQLI attack on email field using "bender@<juice-sh.op>\'--"', () => {
+    it('should log in UserB with SQLI attack on email field using "userb@<webapp.test>\'--"', () => {
       cy.task<string>('GetFromConfig', 'application.domain').then(
         (appDomain: string) => {
-          cy.get('#email').type(`bender@${appDomain}'--`)
+          cy.get('#email').type(`userb@${appDomain}'--`)
           cy.get('#password').type('a')
           cy.get('#loginButton').click()
         }
       )
-      cy.expectChallengeSolved({ challenge: 'Login Bender' })
+      cy.expectChallengeSolved({ challenge: 'Login UserB' })
     })
   })
 
@@ -139,18 +139,18 @@ describe('/#/login', () => {
       cy.get('#password').type('bW9jLmxpYW1nQGhjaW5pbW1pay5ucmVvamI=')
       cy.get('#loginButton').click()
 
-      cy.expectChallengeSolved({ challenge: 'Login Bjoern' })
+      cy.expectChallengeSolved({ challenge: 'Login UserE' })
     })
   })
 
   describe('challenge "ghostLogin"', () => {
-    it('should be able to log in as chris.pike@juice-sh.op by using "\' or deletedAt IS NOT NULL --"', () => {
+    it('should be able to log in as chris.pike@webapp.test by using "\' or deletedAt IS NOT NULL --"', () => {
       cy.get('#email').type("' or deletedAt IS NOT NULL--")
       cy.get('#password').type('a')
       cy.get('#loginButton').click()
     })
 
-    it('should be able to log in as chris.pike@juice-sh.op by using "chris.pike@juice-sh.op\' --"', () => {
+    it('should be able to log in as chris.pike@webapp.test by using "chris.pike@webapp.test\' --"', () => {
       cy.task<string>('GetFromConfig', 'application.domain').then(
         (appDomain: string) => {
           cy.get('#email').type(`chris.pike@${appDomain}'--`)
@@ -165,7 +165,7 @@ describe('/#/login', () => {
   describe('challenge "ephemeralAccountant"', () => {
     it('should log in non-existing accountant user with SQLI attack on email field using UNION SELECT payload', () => {
       cy.get('#email').type(
-        "' UNION SELECT * FROM (SELECT 15 as 'id', '' as 'username', 'acc0unt4nt@juice-sh.op' as 'email', '12345' as 'password', 'accounting' as 'role', '123' as 'deluxeToken', '1.2.3.4' as 'lastLoginIp' , '/assets/public/images/uploads/default.svg' as 'profileImage', '' as 'totpSecret', 1 as 'isActive', '1999-08-16 14:14:41.644 +00:00' as 'createdAt', '1999-08-16 14:33:41.930 +00:00' as 'updatedAt', null as 'deletedAt')--"
+        "' UNION SELECT * FROM (SELECT 15 as 'id', '' as 'username', 'acc0unt4nt@webapp.test' as 'email', '12345' as 'password', 'accounting' as 'role', '123' as 'deluxeToken', '1.2.3.4' as 'lastLoginIp' , '/assets/public/images/uploads/default.svg' as 'profileImage', '' as 'totpSecret', 1 as 'isActive', '1999-08-16 14:14:41.644 +00:00' as 'createdAt', '1999-08-16 14:33:41.930 +00:00' as 'updatedAt', null as 'deletedAt')--"
       )
       cy.get('#password').type('a')
       cy.get('#loginButton').click()

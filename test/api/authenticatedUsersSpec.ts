@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014-2026 Bjoern Kimminich & the OWASP Juice Shop contributors.
+ * Copyright (c) 2014-2026 UserE Kimminich & the Security Project Vulnerable App contributors.
  * SPDX-License-Identifier: MIT
  */
 
@@ -11,7 +11,7 @@ import config from 'config'
 const REST_URL = 'http://localhost:3000/rest'
 
 const jsonHeader = { ContentType: 'application/json' }
-const authHeader = { Authorization: `Bearer ${security.authorize({ data: { email: 'admin@juice-sh.op' } })}`, 'content-type': 'application/json' }
+const authHeader = { Authorization: `Bearer ${security.authorize({ data: { email: 'testadmin@webapp.test' } })}`, 'content-type': 'application/json' }
 
 describe('/rest/user/authentication-details', () => {
   it('GET all users with password replaced by asterisks', () => {
@@ -26,7 +26,7 @@ describe('/rest/user/authentication-details', () => {
     await frisby.post(`${REST_URL}/user/login`, {
       headers: jsonHeader,
       body: {
-        email: `jim@${config.get<string>('application.domain')}`,
+        email: `usera@${config.get<string>('application.domain')}`,
         password: 'ncc-1701'
       }
     }).promise()
@@ -35,7 +35,7 @@ describe('/rest/user/authentication-details', () => {
       .expect('status', 200)
       .promise()
 
-    const jim = response.json.data.find((user: any) => user.email.startsWith('jim@'))
+    const jim = response.json.data.find((user: any) => user.email.startsWith('usera@'))
 
     expect(jim).not.toBe(null)
     expect(jim.lastLoginTime).toEqual(expect.any(Number))

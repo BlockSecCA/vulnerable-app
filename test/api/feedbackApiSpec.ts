@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014-2026 Bjoern Kimminich & the OWASP Juice Shop contributors.
+ * Copyright (c) 2014-2026 UserE Kimminich & the Security Project Vulnerable App contributors.
  * SPDX-License-Identifier: MIT
  */
 import * as frisby from 'frisby'
@@ -162,7 +162,7 @@ describe('/api/Feedbacks', () => {
             return frisby.post(API_URL + '/Feedbacks', {
               headers: { Authorization: 'Bearer ' + jsonLogin.authentication.token, 'content-type': 'application/json' },
               body: {
-                comment: 'Bender\'s choice award!',
+                comment: 'UserB\'s choice award!',
                 rating: 5,
                 UserId: 3,
                 captchaId: json.captchaId,

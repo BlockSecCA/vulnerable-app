@@ -2,7 +2,7 @@
   "document": {
     "acknowledgments": [
       {
-        "organization": "OWASP",
+        "organization": "Security Project",
         "summary": "Probably the most modern and sophisticated insecure web application"
       }
     ],
@@ -20,18 +20,18 @@
     "notes": [
       {
         "category": "legal_disclaimer",
-        "text": "The Juice Shop contains vulnerabilities. ONLY run the Juice Shop in an isolated training environment.",
+        "text": "The Vulnerable App contains vulnerabilities. ONLY run the Vulnerable App in an isolated training environment.",
         "title": "Isolated Env."
       }
     ],
     "publisher": {
       "category": "vendor",
       "contact_details": "jannik.hollenbach@owasp.org;timo.pagel@owasp.org",
-      "issuing_authority": "OWASP Juice Shop",
-      "name": "OWASP Juice Shop Core Team",
-      "namespace": "https://github.com/juice-shop/juice-shop"
+      "issuing_authority": "Security Project Vulnerable App",
+      "name": "Security Project Vulnerable App Core Team",
+      "namespace": "https://github.com/vulnerable-app/vulnerable-app"
     },
-    "title": "juice-shop-sa-disclaimer",
+    "title": "vulnerable-app-sa-disclaimer",
     "tracking": {
       "current_release_date": "2024-03-03T11:00:00.000Z",
       "generator": {
@@ -41,7 +41,7 @@
           "version": "2.5.2"
         }
       },
-      "id": "juice-shop-sa-disclaimer",
+      "id": "vulnerable-app-sa-disclaimer",
       "initial_release_date": "2024-03-03T11:00:00.000Z",
       "revision_history": [
         {
@@ -60,10 +60,10 @@
         "category": "product_version_range",
         "name": "vers:all/>=0.0.1",
         "product": {
-          "name": "OWASP Juice Shop",
-          "product_id": "juice-shop/juice-shop",
+          "name": "Security Project Vulnerable App",
+          "product_id": "vulnerable-app/vulnerable-app",
           "product_identification_helper": {
-            "purl": "pkg:docker/bkimminich/juice-shop"
+            "purl": "pkg:docker/bkimminich/vulnerable-app"
           }
         }
       },
@@ -71,8 +71,8 @@
         "category": "product_version_range",
         "name": "vers:all/>=17.0.0",
         "product": {
-          "name": "OWASP Juice Shop",
-          "product_id": "juice-shop/juice-shop-17-or-later"
+          "name": "Security Project Vulnerable App",
+          "product_id": "vulnerable-app/vulnerable-app-17-or-later"
         }
       }
     ]
@@ -82,22 +82,22 @@
       "notes": [
         {
           "category": "details",
-          "text": "The Juice Shop has intentional vulnerabilities which might be abused to attack your system",
-          "title": "Intentional Vulnerable Juice Shop"
+          "text": "The Vulnerable App has intentional vulnerabilities which might be abused to attack your system",
+          "title": "Intentional Vulnerable Vulnerable App"
         }
       ],
       "product_status": {
         "known_affected": [
-          "juice-shop/juice-shop"
+          "vulnerable-app/vulnerable-app"
         ]
       },
       "remediations": [
         {
           "category": "no_fix_planned",
           "date": "2024-03-03T11:00:00.000Z",
-          "details": "ONLY run the Juice Shop in an isolated training environment.",
+          "details": "ONLY run the Vulnerable App in an isolated training environment.",
           "product_ids": [
-            "juice-shop/juice-shop"
+            "vulnerable-app/vulnerable-app"
           ]
         },
         {
@@ -105,9 +105,9 @@
           "date": "2024-03-10T08:46:00.000Z",
           "details": "Explicitly enable safetyMode to disable unsecure challenges.\n\n```yaml\nchallenges:\n  safetyMode: enabled\n```\n",
           "product_ids": [
-            "juice-shop/juice-shop-17-or-later"
+            "vulnerable-app/vulnerable-app-17-or-later"
           ],
-          "url": "https://github.com/juice-shop/juice-shop/issues/2174"
+          "url": "https://github.com/vulnerable-app/vulnerable-app/issues/2174"
         }
       ],
       "scores": [
@@ -131,7 +131,7 @@
             "version": "3.1"
           },
           "products": [
-            "juice-shop/juice-shop"
+            "vulnerable-app/vulnerable-app"
           ]
         }
       ],

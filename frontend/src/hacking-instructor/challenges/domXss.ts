@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014-2026 Bjoern Kimminich & the OWASP Juice Shop contributors.
+ * Copyright (c) 2014-2026 UserE Kimminich & the Security Project Vulnerable App contributors.
  * SPDX-License-Identifier: MIT
  */
 
@@ -33,7 +33,7 @@ export const DomXssInstruction: ChallengeInstruction = {
       resolved: waitForElementsInnerHtmlToBe('#searchValue', 'owasp')
     },
     {
-      text: 'Nice! You should now see many cool OWASP-related products.',
+      text: 'Nice! You should now see many cool Security Project-related products.',
       fixture: '#product-search-fixture',
       resolved: waitInMs(8000)
     },

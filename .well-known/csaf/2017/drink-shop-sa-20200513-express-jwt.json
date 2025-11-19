@@ -2,7 +2,7 @@
   "document": {
     "acknowledgments": [
       {
-        "organization": "OWASP Juice Shop",
+        "organization": "Security Project Vulnerable App",
         "summary": "Probably the most modern and sophisticated insecure web application"
       }
     ],
@@ -15,18 +15,18 @@
     "notes": [
       {
         "category": "legal_disclaimer",
-        "text": "The Juice Shop contains vulnerabilities. Only use it in an isolated. ONLY run the Juice Shop in a training environment.",
+        "text": "The Vulnerable App contains vulnerabilities. Only use it in an isolated. ONLY run the Vulnerable App in a training environment.",
         "title": "Isolated Env."
       }
     ],
     "publisher": {
       "category": "vendor",
       "contact_details": "timo.pagel@owasp.org",
-      "issuing_authority": "OWASP Juice Shop",
-      "name": "OWASP Juice Shop Core Team",
-      "namespace": "https://github.com/juice-shop/juice-shop"
+      "issuing_authority": "Security Project Vulnerable App",
+      "name": "Security Project Vulnerable App Core Team",
+      "namespace": "https://github.com/vulnerable-app/vulnerable-app"
     },
-    "title": "juice-shop-sa-20200513-express-jwt",
+    "title": "vulnerable-app-sa-20200513-express-jwt",
     "tracking": {
       "current_release_date": "2024-03-03T11:00:00.000Z",
       "generator": {
@@ -36,7 +36,7 @@
           "version": "2.5.0"
         }
       },
-      "id": "juice-shop-sa-20200513-express-jwt",
+      "id": "vulnerable-app-sa-20200513-express-jwt",
       "initial_release_date": "2024-03-03T11:00:00.000Z",
       "revision_history": [
         {
@@ -55,10 +55,10 @@
         "category": "product_version_range",
         "name": ">=v6.0.0",
         "product": {
-          "name": "OWASP Juice Shop",
-          "product_id": "juice-shop/juice-shop",
+          "name": "Security Project Vulnerable App",
+          "product_id": "vulnerable-app/vulnerable-app",
           "product_identification_helper": {
-            "purl": "pkg:docker/bkimminich/juice-shop"
+            "purl": "pkg:docker/bkimminich/vulnerable-app"
           }
         }
       }
@@ -70,22 +70,22 @@
       "notes": [
         {
           "category": "details",
-          "text": "The Juice Shop is currently vulnerable to JWT null algorithm attacks . We will soon release a patch",
+          "text": "The Vulnerable App is currently vulnerable to JWT null algorithm attacks . We will soon release a patch",
           "title": "Vulnerable to Null JWT Algorithm"
         }
       ],
       "product_status": {
         "known_affected": [
-          "juice-shop/juice-shop"
+          "vulnerable-app/vulnerable-app"
         ]
       },
       "remediations": [
         {
           "category": "workaround",
           "date": "2020-07-01T10:00:00.000Z",
-          "details": "Check for the expected JWT algorithm type in a WAF/Proxy/Loadbalancer in front of the Juice Shop.",
+          "details": "Check for the expected JWT algorithm type in a WAF/Proxy/Loadbalancer in front of the Vulnerable App.",
           "product_ids": [
-            "juice-shop/juice-shop"
+            "vulnerable-app/vulnerable-app"
           ],
           "url": "https://github.com/advisories/GHSA-6g6m-m6h5-w9gf"
         }
@@ -111,7 +111,7 @@
             "version": "3.1"
           },
           "products": [
-            "juice-shop/juice-shop"
+            "vulnerable-app/vulnerable-app"
           ]
         }
       ],

@@ -25,8 +25,8 @@
   ],
   "publisher": {
     "category": "vendor",
-    "name": "OWASP Juice Shop",
-    "namespace": "/juice-shop/juice-shop",
+    "name": "Security Project Vulnerable App",
+    "namespace": "/vulnerable-app/vulnerable-app",
     "contact_details": "timo.pagel@owasp.org"
   },
   "role": "csaf_trusted_provider"

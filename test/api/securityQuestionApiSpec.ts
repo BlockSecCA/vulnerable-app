@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014-2026 Bjoern Kimminich & the OWASP Juice Shop contributors.
+ * Copyright (c) 2014-2026 UserE Kimminich & the Security Project Vulnerable App contributors.
  * SPDX-License-Identifier: MIT
  */
 
@@ -59,7 +59,7 @@ describe('/api/SecurityQuestions/:id', () => {
 
 describe('/rest/user/security-question', () => {
   it('GET security question for an existing user\'s email address', () => {
-    return frisby.get(`${REST_URL}/user/security-question?email=jim@${config.get<string>('application.domain')}`)
+    return frisby.get(`${REST_URL}/user/security-question?email=usera@${config.get<string>('application.domain')}`)
       .expect('status', 200)
       .expect('json', 'question', {
         question: 'Your eldest siblings middle name?'

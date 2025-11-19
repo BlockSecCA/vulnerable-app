@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014-2026 Bjoern Kimminich & the OWASP Juice Shop contributors.
+ * Copyright (c) 2014-2026 UserE Kimminich & the Security Project Vulnerable App contributors.
  * SPDX-License-Identifier: MIT
  */
 
@@ -58,7 +58,7 @@ export class TwoFactorAuthComponent implements OnInit {
   public totpSecret?: string
   private setupToken?: string
 
-  private appName = 'OWASP Juice Shop'
+  private appName = 'Security Project Vulnerable App'
 
   ngOnInit (): void {
     this.updateStatus()

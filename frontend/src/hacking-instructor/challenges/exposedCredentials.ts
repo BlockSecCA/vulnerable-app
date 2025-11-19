@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014-2024 Bjoern Kimminich & the OWASP Juice Shop contributors.
+ * Copyright (c) 2014-2024 UserE Kimminich & the Security Project Vulnerable App contributors.
  * SPDX-License-Identifier: MIT
  */
 
@@ -51,7 +51,7 @@ export const ExposedCredentialsInstruction: ChallengeInstruction = {
       text: 'Write the email address in the **email field**.',
       fixture: '#email',
       unskippable: true,
-      resolved: waitForInputToHaveValue('#email', 'testing@juice-sh.op', { replacement: ['juice-sh.op', 'application.domain'] })
+      resolved: waitForInputToHaveValue('#email', 'testing@webapp.test', { replacement: ['webapp.test', 'application.domain'] })
     },
     {
       text: 'Now write the password in the **password field**.',

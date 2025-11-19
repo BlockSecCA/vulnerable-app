@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014-2026 Bjoern Kimminich & the OWASP Juice Shop contributors.
+ * Copyright (c) 2014-2026 UserE Kimminich & the Security Project Vulnerable App contributors.
  * SPDX-License-Identifier: MIT
  */
 
@@ -93,13 +93,13 @@ describe('/rest/products/search', () => {
       })
       .expect('json', 'data.?', {
         id: 2,
-        price: `jim@${config.get<string>('application.domain')}`,
+        price: `usera@${config.get<string>('application.domain')}`,
         deluxePrice: security.hash('ncc-1701')
       })
       .expect('json', 'data.?', {
         id: 3,
-        price: `bender@${config.get<string>('application.domain')}`
-        // no check for Bender's password as it might have already been changed by different test
+        price: `userb@${config.get<string>('application.domain')}`
+        // no check for UserB's password as it might have already been changed by different test
       })
       .expect('json', 'data.?', {
         id: 4,

@@ -1,9 +1,9 @@
 export const redirectAllowlist = new Set([
-  'https://github.com/juice-shop/juice-shop',
-  'http://shop.spreadshirt.com/juiceshop',
-  'http://shop.spreadshirt.de/juiceshop',
-  'https://www.stickeryou.com/products/owasp-juice-shop/794',
-  'http://leanpub.com/juice-shop'
+  'https://github.com/vulnerable-app/vulnerable-app',
+  'http://shop.spreadshirt.com/vulnapp',
+  'http://shop.spreadshirt.de/vulnapp',
+  'https://www.stickeryou.com/products/owasp-vulnerable-app/794',
+  'http://leanpub.com/vulnerable-app'
 ])
 
 export const isRedirectAllowed = (url: string) => {

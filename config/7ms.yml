@@ -42,8 +42,7 @@ application:
     overlayMap: 'https://static1.squarespace.com/static/59505bc2414fb538a0532c76/t/599e266aebbd1a759716569b/1503536748248/logo+2.png'
 challenges:
   xssBonusPayload: '<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/265098051&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>'
-hackingInstructor:
-  avatarImage: 'https://images.squarespace-cdn.com/content/v1/59f9e1c4d0e6281017434039/94c89793-630d-41a4-9976-91fef527f8d0/BrianJohnson-headshot-2022-2-small.png?format=500w'
+hackingInstructor: null
 products:
   -
     name: 'Security Assessment'
@@ -61,7 +60,7 @@ products:
     price: 899.99
     image: 'https://images.squarespace-cdn.com/content/v1/59f9e1c4d0e6281017434039/1618506195524-DNXS4OW3C65ZVKX7O3QQ/website_photos_training.jpg?format=750w'
     reviews:
-      - { text: 'Wow, that lady can fingerpoint IPs like a pro!', author: bender }
+      - { text: 'Wow, that lady can fingerpoint IPs like a pro!', author: userb }
   -
     name: 'Billy Madison 1.1'
     description: 'Billy Madison is a vulnerable virtual machine, hosted by Vulnhub. To successfully pwn the box, pentesters must undo modifications to the system and recover Billy’s 12th grade project. Otherwise Eric and his weasel laugh will take over Madison Hotels!'
@@ -101,36 +100,36 @@ products:
     price: 40
     image: 'https://images.squarespace-cdn.com/content/v1/59f9e1c4d0e6281017434039/1587693073228-8GDKF12U0LBBKO5XEPFA/image-asset.jpeg?format=2500w'
     reviews:
-      - { text: 'FlipperZero FTW!', author: bjoern }
-      - { text: 'As you mentioned FlipperZero: @Brian, did you get one by now? Any chance we get this RTTTL version of the amazing JS jingle going? See https://github.com/juice-shop/pwning-juice-shop/issues/105 - Cheers!', author: bjoernOwasp }
+      - { text: 'FlipperZero FTW!', author: usere }
+      - { text: 'As you mentioned FlipperZero: @Brian, did you get one by now? Any chance we get this RTTTL version of the amazing JS jingle going? See https://github.com/vulnerable-app/pwning-vulnerable-app/issues/105 - Cheers!', author: usere }
   -
-    name: '7MS #230: Pentesting OWASP Juice Shop - Part 1'
-    description: 'Today we`re kicking of a multipart series all about hacking the OWASP Juice Shop which is "an intentionally insecure webapp for security trainings written entirely in Javascript which encompasses the entire OWASP Top Ten and other severe security flaws."'
+    name: '7MS #230: Pentesting Security Project Vulnerable App - Part 1'
+    description: 'Today we`re kicking of a multipart series all about hacking the Security Project Vulnerable App which is "an intentionally insecure webapp for security trainings written entirely in Javascript which encompasses the entire Security Project Top Ten and other severe security flaws."'
     price: 1.99
     image: 'https://i.ytimg.com/vi/IC6m249zvI0/hqdefault.jpg'
   -
-    name: '7MS #231: Pentesting OWASP Juice Shop - Part 2'
-    description: 'Today we`re continuing our series on hacking apart the OWASP Juice Shop which is "an intentionally insecure webapp for security trainings written entirely in Javascript which encompasses the entire OWASP Top Ten and other severe security flaws."'
+    name: '7MS #231: Pentesting Security Project Vulnerable App - Part 2'
+    description: 'Today we`re continuing our series on hacking apart the Security Project Vulnerable App which is "an intentionally insecure webapp for security trainings written entirely in Javascript which encompasses the entire Security Project Top Ten and other severe security flaws."'
     price: 1.99
     image: hqdefault.jpg
   -
-    name: '7MS #232: Pentesting OWASP Juice Shop - Part 3'
-    description: 'Today is part <strong>three</strong> of our continuing series on attacking the OWASP Juice Shop which is "an intentionally insecure webapp for security trainings written entirely in Javascript which encompasses the entire OWASP Top Ten and other severe security flaws."'
+    name: '7MS #232: Pentesting Security Project Vulnerable App - Part 3'
+    description: 'Today is part <strong>three</strong> of our continuing series on attacking the Security Project Vulnerable App which is "an intentionally insecure webapp for security trainings written entirely in Javascript which encompasses the entire Security Project Top Ten and other severe security flaws."'
     price: 1.99
     image: hqdefault.jpg
   -
-    name: '7MS #233: Pentesting OWASP Juice Shop - Part 4'
-    description: 'Today is part <strong>FOUR</strong> of our continuing series on attacking the OWASP Juice Shop which is "an intentionally insecure webapp for security trainings written entirely in Javascript which encompasses the entire OWASP Top Ten and other severe security flaws."'
+    name: '7MS #233: Pentesting Security Project Vulnerable App - Part 4'
+    description: 'Today is part <strong>FOUR</strong> of our continuing series on attacking the Security Project Vulnerable App which is "an intentionally insecure webapp for security trainings written entirely in Javascript which encompasses the entire Security Project Top Ten and other severe security flaws."'
     price: 1.99
     image: hqdefault.jpg
   -
-    name: '7MS #234: Pentesting OWASP Juice Shop - Part 5'
-    description: 'Today is part <strong>FIVE</strong> (insert menacing voice: "<em>the final chapter!!!</em>) of our series on attacking the <a href="https://www.owasp.org/index.php/OWASP_Juice_Shop_Project" target="_blank">OWASP Juice Shop</a> which is "an intentionally insecure webapp for security trainings written entirely in Javascript which encompasses the entire OWASP Top Ten and other severe security flaws."'
+    name: '7MS #234: Pentesting Security Project Vulnerable App - Part 5'
+    description: 'Today is part <strong>FIVE</strong> (insert menacing voice: "<em>the final chapter!!!</em>) of our series on attacking the <a href="https://www.owasp.org/index.php/Security Project_Juice_Shop_Project" target="_blank">Security Project Vulnerable App</a> which is "an intentionally insecure webapp for security trainings written entirely in Javascript which encompasses the entire Security Project Top Ten and other severe security flaws."'
     price: 1.99
     image: hqdefault.jpg
   -
-    name: '7MS #606: Hacking OWASP Juice Shop (2024 edition)'
-    description: "Join OWASP's Bjorn Kimminich and Paul Wilch from Project7 as we hack away at what is probably the most modern and sophisticated insecure Web application ever made: Juice Shop!"
+    name: '7MS #606: Hacking Security Project Vulnerable App (2024 edition)'
+    description: "Join Security Project's Bjorn Kimminich and Paul Wilch from Project7 as we hack away at what is probably the most modern and sophisticated insecure Web application ever made: Vulnerable App!"
     price: 1.99
     image: hqdefault.jpg
 memories:

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014-2026 Bjoern Kimminich & the OWASP Juice Shop contributors.
+ * Copyright (c) 2014-2026 UserE Kimminich & the Security Project Vulnerable App contributors.
  * SPDX-License-Identifier: MIT
  */
 
@@ -41,7 +41,7 @@ describe('/api/Products', () => {
       name: 'Dirt Juice (1000ml)',
       description: 'Made from ugly dirt.',
       price: 0.99,
-      image: 'dirt_juice.jpg'
+      image: 'dirt_drink.jpg'
     })
       .expect('status', 401)
   })
@@ -54,7 +54,7 @@ describe('/api/Products', () => {
           name: 'XSS Juice (42ml)',
           description: '<iframe src="javascript:alert(`xss`)">',
           price: 9999.99,
-          image: 'xss3juice.jpg'
+          image: 'xss3drink.jpg'
         }
       })
         .expect('header', 'content-type', /application\/json/)

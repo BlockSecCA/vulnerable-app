@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014-2026 Bjoern Kimminich & the OWASP Juice Shop contributors.
+ * Copyright (c) 2014-2026 UserE Kimminich & the Security Project Vulnerable App contributors.
  * SPDX-License-Identifier: MIT
  */
 
@@ -78,10 +78,10 @@ describe('Server', () => {
     return frisby.get(URL + '/.well-known/csaf/changes.csv')
       .expect('status', 200)
   })
-  it('GET serves a csaf juice-shop-sa-20200513-express-jwt.json', () => {
-    return frisby.get(URL + '/.well-known/csaf/2017/juice-shop-sa-20200513-express-jwt.json')
+  it('GET serves a csaf vulnerable-app-sa-20200513-express-jwt.json', () => {
+    return frisby.get(URL + '/.well-known/csaf/2017/vulnerable-app-sa-20200513-express-jwt.json')
       .expect('status', 200)
-      .expect('bodyContains', 'juice-shop-sa-20200513-express-jwt')
+      .expect('bodyContains', 'vulnerable-app-sa-20200513-express-jwt')
       .expect('bodyContains', 'We will soon release a patch')
   })
 })

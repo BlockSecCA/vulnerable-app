@@ -4,5 +4,5 @@ services:
     links:
       - app
   app:
-    image: bkimminich/juice-shop:latest
+    image: bkimminich/vulnerable-app:latest
     build: ./

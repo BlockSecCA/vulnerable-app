@@ -39,8 +39,7 @@ application:
     overlayMap: 'https://www.sonatype.com/hubfs/2019-ADDO/BG_Bobby-2019_3.png'
 challenges:
   xssBonusPayload: '<iframe width="560" height="315" src="https://www.youtube.com/embed/-Q6ergK_mXw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
-hackingInstructor:
-  avatarImage: 'https://www.alldaydevops.com/hs-fs/hubfs/2019-ADDO/2019-footer-bobby-1.png?width=135&name=2019-footer-bobby-1.png'
+hackingInstructor: null
 products:
   - name: 'Feedback Loops: Voices of All Day DevOps: Volume 1'
     description: 'Four Years of Countless DevOps Journeys Unveiled at All Day DevOps. Over the years, All Day DevOps has explored the stories of over 275 community practitioners around the world - and as we know, with any journey, there is never a single path to success.'
@@ -73,7 +72,7 @@ products:
     price: 39.99
     image: 'https://www.alldaydevops.com/hubfs/ADDO-2018/Cover-ModernInfrastructure@2x.png'
     reviews:
-      - { text: 'I read on PasteBin somewhere that 303 lasers are really dangerous, so why do you (kind of) put one into this product? Are you crazy?!', author: bjoernOwasp }
+      - { text: 'I read on PasteBin somewhere that 303 lasers are really dangerous, so why do you (kind of) put one into this product? Are you crazy?!', author: usere }
     keywordsForPastebinDataLeakChallenge:
       - '101'
       - '202'
@@ -86,7 +85,7 @@ products:
     price: 123.0
     deletedDate: '2018-12-31'
   - name: 'Bjorn Kimminich'
-    description: 'Björn is the project leader of the OWASP Juice Shop and a board member for the German OWASP chapter.'
+    description: 'Björn is the project leader of the Security Project Vulnerable App and a board member for the German Security Project chapter.'
     price: 999999.99
     quantity: 0
     image: 'https://www.alldaydevops.com/hubfs/Bjorn_Kimminich.jpg'
@@ -98,19 +97,19 @@ products:
     price: 49.99
     image: 'https://pbs.twimg.com/media/Di5A_iYU4AAxpXT?format=jpg&name=small'
     reviews:
-      - { text: 'Bah, puny earthling music.', author: bender }
+      - { text: 'Bah, puny earthling music.', author: userb }
   -
     name: 'DevSecOps Unicorn Poster, 80x60'
     description: 'Glossy print to make the rainbow colors shine even brighter.'
     price: 9.99
     image: 'https://pbs.twimg.com/media/CEQOsL9XIAAezy_?format=png&name=small'
     reviews:
-      - { text: 'This will decorate the captain`s ready room nicely.', author: jim }
+      - { text: 'This will decorate the captain`s ready room nicely.', author: usera }
 memories:
   -
     image: 'https://pbs.twimg.com/media/EH1dQzVWoAA11q5?format=jpg&name=medium'
     caption: '"WE LOVE OUR SPEAKERS" - @AllDayDevOps - You clearly do! 😮😯😲😀😃😁'
-    user: bjoernOwasp
+    user: usere
   -
     image: 'favorite-hiking-place.png'
     caption: 'I love going hiking here...'

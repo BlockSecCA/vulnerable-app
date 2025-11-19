@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014-2026 Bjoern Kimminich & the OWASP Juice Shop contributors.
+ * Copyright (c) 2014-2026 UserE Kimminich & the Security Project Vulnerable App contributors.
  * SPDX-License-Identifier: MIT
  */
 
@@ -17,7 +17,7 @@ describe('/api/Quantitys', () => {
     return frisby.post(`${REST_URL}/user/login`, {
       headers: jsonHeader,
       body: {
-        email: `jim@${config.get<string>('application.domain')}`,
+        email: `usera@${config.get<string>('application.domain')}`,
         password: 'ncc-1701'
       }
     })
@@ -68,7 +68,7 @@ describe('/api/Quantitys', () => {
     return frisby.post(`${REST_URL}/user/login`, {
       headers: jsonHeader,
       body: {
-        email: `jim@${config.get<string>('application.domain')}`,
+        email: `usera@${config.get<string>('application.domain')}`,
         password: 'ncc-1701'
       }
     })
@@ -133,7 +133,7 @@ describe('/api/Quantitys/:ids', () => {
     return frisby.post(`${REST_URL}/user/login`, {
       headers: jsonHeader,
       body: {
-        email: `jim@${config.get<string>('application.domain')}`,
+        email: `usera@${config.get<string>('application.domain')}`,
         password: 'ncc-1701'
       }
     })
@@ -203,7 +203,7 @@ describe('/api/Quantitys/:ids', () => {
     return frisby.post(`${REST_URL}/user/login`, {
       headers: jsonHeader,
       body: {
-        email: `jim@${config.get<string>('application.domain')}`,
+        email: `usera@${config.get<string>('application.domain')}`,
         password: 'ncc-1701'
       }
     })
@@ -224,7 +224,7 @@ describe('/api/Quantitys/:ids', () => {
     return frisby.post(`${REST_URL}/user/login`, {
       headers: jsonHeader,
       body: {
-        email: `jim@${config.get<string>('application.domain')}`,
+        email: `usera@${config.get<string>('application.domain')}`,
         password: 'ncc-1701'
       }
     })
@@ -322,7 +322,7 @@ describe('/api/Quantitys/:ids', () => {
     return frisby.post(`${REST_URL}/user/login`, {
       headers: jsonHeader,
       body: {
-        email: `jim@${config.get<string>('application.domain')}`,
+        email: `usera@${config.get<string>('application.domain')}`,
         password: 'ncc-1701'
       }
     })

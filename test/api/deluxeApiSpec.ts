@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014-2026 Bjoern Kimminich & the OWASP Juice Shop contributors.
+ * Copyright (c) 2014-2026 UserE Kimminich & the Security Project Vulnerable App contributors.
  * SPDX-License-Identifier: MIT
  */
 
@@ -31,7 +31,7 @@ describe('/rest/deluxe-membership', () => {
     return frisby.post(REST_URL + '/user/login', {
       headers: jsonHeader,
       body: {
-        email: 'bender@' + config.get<string>('application.domain'),
+        email: 'userb@' + config.get<string>('application.domain'),
         password: 'OhG0dPlease1nsertLiquor!'
       }
     })
@@ -101,7 +101,7 @@ describe('/rest/deluxe-membership', () => {
 
   it('POST upgrade deluxe membership status for customers', async () => {
     const { token } = await login({
-      email: `bender@${config.get<string>('application.domain')}`,
+      email: `userb@${config.get<string>('application.domain')}`,
       password: 'OhG0dPlease1nsertLiquor!'
     })
 
@@ -125,7 +125,7 @@ describe('/rest/deluxe-membership', () => {
 
   it('POST deluxe membership status with wrong card id throws error', async () => {
     const { token } = await login({
-      email: `jim@${config.get<string>('application.domain')}`,
+      email: `usera@${config.get<string>('application.domain')}`,
       password: 'ncc-1701'
     })
 

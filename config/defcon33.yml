@@ -48,8 +48,7 @@ application:
 challenges:
   overwriteUrlForProductTamperingChallenge: 'https://discord.com/invite/defcon'
   safetyMode: disabled
-hackingInstructor:
-  avatarImage: 'https://training.defcon.org/cdn/shop/files/DCTraining_sticker1.jpg?v=1692301964&width=600'
+hackingInstructor: null
 products:
   -
     name: 'DEFCON 32 Sticker Pack'
@@ -59,24 +58,24 @@ products:
     quantity: 0
     reviews:
       - { text: "Rad, dude!", author: rapper }
-      - { text: "Looks spacy on Bones' new tricorder!", author: jim }
-      - { text: "Will put one on the Planet Express ship's bumper!", author: bender }
+      - { text: "Looks spacy on Bones' new tricorder!", author: usera }
+      - { text: "Will put one on the Planet Express ship's bumper!", author: userb }
   -
     name: 'Hawaiian Shirt'
     price: 60
     description: "DEFCON Hawaiian shirt! Soft and breezy. Perfect for a day at the pool."
     image: 'https://shop.defcon.org/cdn/shop/files/defcon-hawaiian_720x.png?v=1732927277'
     reviews:
-      - { text: "Humans must really be color blind...", author: bender }
-      - { text: '0 st4rs f0r 7h3 h0rr1bl3 s7y13', author: uvogin }
+      - { text: "Humans must really be color blind...", author: userb }
+      - { text: '0 st4rs f0r 7h3 h0rr1bl3 s7y13', author: userd }
   -
     name: 'DEFCON Holiday Sweater'
     price: 60
     description: "Get in to the DEFCON holiday spirit with our brand new knit sweaters! These sweaters are fully knitted with the design woven in. They are very soft and cozy – ideal for the stylish hacker in your life."
     image: 'https://shop.defcon.org/cdn/shop/files/y21QZGdI_720x.jpg?v=1732924318'
     reviews:
-      - { text: "I hope Santa has you on his naughty list!", author: bender }
-      - { text: '-1 st4rs f0r 3v3n m0r3 7h3 h0rr1bl3 s7y13', author: uvogin }
+      - { text: "I hope Santa has you on his naughty list!", author: userb }
+      - { text: '-1 st4rs f0r 3v3n m0r3 7h3 h0rr1bl3 s7y13', author: userd }
   -
     name: 'DEF CON 33 Las Vegas Convention Center'
     price: 540
@@ -84,7 +83,7 @@ products:
     image: 'https://shop.defcon.org/cdn/shop/files/ticket_720x.jpg?v=1740606815'
     quantity: 3
     reviews:
-      - { text: "I'll be there! Will you, too?", author: bjoernOwasp }
+      - { text: "I'll be there! Will you, too?", author: usere }
   -
     name: 'Unofficial DEF CON 31 Glow-in-the-dark "Script Kitty" t-shirt'
     price: 31.95
@@ -103,7 +102,7 @@ products:
     image: 'https://shop.defcon.org/cdn/shop/files/front_table_1080x.jpg?v=1724260452'
     quantity: 0
     reviews:
-      - { text: "Pss-pss-pss!", author: bjoern }
+      - { text: "Pss-pss-pss!", author: usere }
   -
     name: 'DEFCON1'
     price: 71.64
@@ -131,12 +130,12 @@ products:
       - hueteroneel
       - eurogium edule
   -
-    name: 'OWASP Juice Shop Logo (3D-printed)'
+    name: 'Security Project Vulnerable App Logo (3D-printed)'
     description: 'This rare item was designed and handcrafted in Sweden. This is why it is so incredibly expensive despite its complete lack of purpose.'
     price: 99.99
     image: 3d_keychain.jpg # Exif metadata contains "OpenSCAD" as subtle hint...
     deletedDate: '2025-05-12'
-    fileForRetrieveBlueprintChallenge: JuiceShop.stl # ...to blueprint file type
+    fileForRetrieveBlueprintChallenge: VulnerableApp.stl # ...to blueprint file type
     exifForBlueprintChallenge:
       - OpenSCAD
 memories:

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014-2026 Bjoern Kimminich & the OWASP Juice Shop contributors.
+ * Copyright (c) 2014-2026 UserE Kimminich & the Security Project Vulnerable App contributors.
  * SPDX-License-Identifier: MIT
  */
 
@@ -16,8 +16,8 @@ const restoreOverwrittenFilesWithOriginals = async () => {
 
   if (await exists(path.resolve('frontend/dist'))) {
     await copyFile(
-      path.resolve('data/static/owasp_promo.vtt'),
-      path.resolve('frontend/dist/frontend/assets/public/videos/owasp_promo.vtt')
+      path.resolve('data/static/app_promo.vtt'),
+      path.resolve('frontend/dist/frontend/assets/public/videos/app_promo.vtt')
     )
   }
 

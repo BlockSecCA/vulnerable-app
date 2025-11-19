@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014-2026 Bjoern Kimminich & the OWASP Juice Shop contributors.
+ * Copyright (c) 2014-2026 UserE Kimminich & the Security Project Vulnerable App contributors.
  * SPDX-License-Identifier: MIT
  */
 
@@ -57,7 +57,7 @@ export class LoginComponent implements OnInit {
   public clientId = '1005568560502-6hm16lef8oh46hr2d98vf2ohlnj4nfhq.apps.googleusercontent.com'
   public oauthUnavailable = true
   public redirectUri = ''
-  public testingUsername = 'testing@juice-sh.op'
+  public testingUsername = 'testing@webapp.test'
   public testingPassword = 'IamUsedForTesting'
 
   ngOnInit (): void {

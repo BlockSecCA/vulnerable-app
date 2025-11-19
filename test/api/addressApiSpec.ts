@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014-2026 Bjoern Kimminich & the OWASP Juice Shop contributors.
+ * Copyright (c) 2014-2026 UserE Kimminich & the Security Project Vulnerable App contributors.
  * SPDX-License-Identifier: MIT
  */
 
@@ -16,7 +16,7 @@ beforeAll(() => {
   return frisby.post(REST_URL + '/user/login', {
     headers: jsonHeader,
     body: {
-      email: 'jim@juice-sh.op',
+      email: 'usera@webapp.test',
       password: 'ncc-1701'
     }
   })
@@ -41,7 +41,7 @@ describe('/api/Addresss', () => {
     return frisby.post(API_URL + '/Addresss', {
       headers: authHeader,
       body: {
-        fullName: 'Jim',
+        fullName: 'UserA',
         mobileNum: '9800000000',
         zipCode: 'NX 101',
         streetAddress: 'Bakers Street',
@@ -57,7 +57,7 @@ describe('/api/Addresss', () => {
     return frisby.post(API_URL + '/Addresss', {
       headers: authHeader,
       body: {
-        fullName: 'Jim',
+        fullName: 'UserA',
         mobileNum: '9800000000',
         zipCode: 'NX 10111111',
         streetAddress: 'Bakers Street',
@@ -73,7 +73,7 @@ describe('/api/Addresss', () => {
     return frisby.post(API_URL + '/Addresss', {
       headers: authHeader,
       body: {
-        fullName: 'Jim',
+        fullName: 'UserA',
         mobileNum: '10000000000',
         zipCode: 'NX 101',
         streetAddress: 'Bakers Street',
@@ -87,7 +87,7 @@ describe('/api/Addresss', () => {
 
   it('POST new address is forbidden via public API', () => {
     return frisby.post(API_URL + '/Addresss', {
-      fullName: 'Jim',
+      fullName: 'UserA',
       mobileNum: '9800000000',
       zipCode: 'NX 10111111',
       streetAddress: 'Bakers Street',
@@ -104,7 +104,7 @@ describe('/api/Addresss/:id', () => {
     return frisby.post(API_URL + '/Addresss', {
       headers: authHeader,
       body: {
-        fullName: 'Jim',
+        fullName: 'UserA',
         mobileNum: '9800000000',
         zipCode: 'NX 101',
         streetAddress: 'Bakers Street',

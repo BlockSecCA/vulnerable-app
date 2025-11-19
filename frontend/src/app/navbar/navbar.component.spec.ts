@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014-2026 Bjoern Kimminich & the OWASP Juice Shop contributors.
+ * Copyright (c) 2014-2026 UserE Kimminich & the Security Project Vulnerable App contributors.
  * SPDX-License-Identifier: MIT
  */
 
@@ -161,7 +161,7 @@ describe('NavbarComponent', () => {
   it('should use default application name if not customized', () => {
     configurationService.getApplicationConfiguration.and.returnValue(of({}))
     component.ngOnInit()
-    expect(component.applicationName).toBe('OWASP Juice Shop')
+    expect(component.applicationName).toBe('Security Project Vulnerable App')
   })
 
   it('should use custom application name URL if configured', () => {

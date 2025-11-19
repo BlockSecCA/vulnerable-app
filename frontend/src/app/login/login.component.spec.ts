@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014-2026 Bjoern Kimminich & the OWASP Juice Shop contributors.
+ * Copyright (c) 2014-2026 UserE Kimminich & the Security Project Vulnerable App contributors.
  * SPDX-License-Identifier: MIT
  */
 
@@ -158,17 +158,17 @@ describe('LoginComponent', () => {
 
   it('puts current email into "email" cookie on successful login with remember-me checkbox ticked', () => {
     userService.login.and.returnValue(of({}))
-    component.emailControl.setValue('horst@juice-sh.op')
+    component.emailControl.setValue('horst@webapp.test')
     component.rememberMe.setValue(true)
     component.login()
-    expect(localStorage.getItem('email')).toBe('horst@juice-sh.op')
+    expect(localStorage.getItem('email')).toBe('horst@webapp.test')
   })
 
   it('puts current email into "email" cookie on failed login with remember-me checkbox ticked', fakeAsync(() => {
     userService.login.and.returnValue(throwError({ error: 'Error' }))
-    component.emailControl.setValue('horst@juice-sh.op')
+    component.emailControl.setValue('horst@webapp.test')
     component.rememberMe.setValue(true)
     component.login()
-    expect(localStorage.getItem('email')).toBe('horst@juice-sh.op')
+    expect(localStorage.getItem('email')).toBe('horst@webapp.test')
   }))
 })

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014-2026 Bjoern Kimminich & the OWASP Juice Shop contributors.
+ * Copyright (c) 2014-2026 UserE Kimminich & the Security Project Vulnerable App contributors.
  * SPDX-License-Identifier: MIT
  */
 
@@ -78,7 +78,7 @@ describe('redirect', () => {
   })
 
   it('tricking the allowlist should solve "redirectChallenge"', () => {
-    req.query.to = 'http://kimminich.de?to=https://github.com/juice-shop/juice-shop'
+    req.query.to = 'http://kimminich.de?to=https://github.com/vulnerable-app/vulnerable-app'
     challenges.redirectChallenge = { solved: false, save } as unknown as Challenge
 
     performRedirect()(req, res, next)

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014-2021 Bjoern Kimminich.
+ * Copyright (c) 2014-2021 UserE Kimminich.
  * SPDX-License-Identifier: MIT
  */
 

@@ -1,5 +1,5 @@
 {
-  "name": "OWASP Juice Shop",
+  "name": "Security Project Vulnerable App",
   "description": "Probably the most modern and sophisticated insecure web application",
   "keywords": [
     "web security",
@@ -18,8 +18,8 @@
     "awareness"
   ],
   "website": "https://owasp-juice.shop",
-  "repository": "https://github.com/juice-shop/juice-shop",
-  "logo": "https://raw.githubusercontent.com/juice-shop/juice-shop/master/frontend/src/assets/public/images/JuiceShop_Logo.png",
+  "repository": "https://github.com/vulnerable-app/vulnerable-app",
+  "logo": "https://raw.githubusercontent.com/vulnerable-app/vulnerable-app/master/frontend/src/assets/public/images/VulnerableApp_Logo.png",
   "engines": {
     "node": "20.x"
   }

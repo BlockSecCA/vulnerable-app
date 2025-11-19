@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014-2026 Bjoern Kimminich & the OWASP Juice Shop contributors.
+ * Copyright (c) 2014-2026 UserE Kimminich & the Security Project Vulnerable App contributors.
  * SPDX-License-Identifier: MIT
  */
 
@@ -148,7 +148,7 @@ describe('/rest/user/data-export', () => {
     return frisby.post(REST_URL + '/user/login', {
       headers: jsonHeader,
       body: {
-        email: 'jim@' + config.get<string>('application.domain'),
+        email: 'usera@' + config.get<string>('application.domain'),
         password: 'ncc-1701'
       }
     })
@@ -166,14 +166,14 @@ describe('/rest/user/data-export', () => {
           .then(({ json }) => {
             const parsedData = JSON.parse(json.userData)
             expect(parsedData.username).toBe('')
-            expect(parsedData.email).toBe('jim@' + config.get<string>('application.domain'))
+            expect(parsedData.email).toBe('usera@' + config.get<string>('application.domain'))
             expect(parsedData.reviews[0].message).toBe('Looks so much better on my uniform than the boring Starfleet symbol.')
-            expect(parsedData.reviews[0].author).toBe('jim@' + config.get<string>('application.domain'))
+            expect(parsedData.reviews[0].author).toBe('usera@' + config.get<string>('application.domain'))
             expect(parsedData.reviews[0].productId).toBe(20)
             expect(parsedData.reviews[0].likesCount).toBe(0)
             expect(parsedData.reviews[0].likedBy[0]).toBe(undefined)
             expect(parsedData.reviews[1].message).toBe('Fresh out of a replicator.')
-            expect(parsedData.reviews[1].author).toBe('jim@' + config.get<string>('application.domain'))
+            expect(parsedData.reviews[1].author).toBe('usera@' + config.get<string>('application.domain'))
             expect(parsedData.reviews[1].productId).toBe(22)
             expect(parsedData.reviews[1].likesCount).toBe(0)
             expect(parsedData.reviews[1].likedBy[0]).toBe(undefined)
@@ -190,7 +190,7 @@ describe('/rest/user/data-export', () => {
     return frisby.post(REST_URL + '/user/login', {
       headers: jsonHeader,
       body: {
-        email: 'jim@' + config.get<string>('application.domain'),
+        email: 'usera@' + config.get<string>('application.domain'),
         password: 'ncc-1701'
       }
     })
@@ -218,7 +218,7 @@ describe('/rest/user/data-export', () => {
               .then(({ json }) => {
                 const parsedData = JSON.parse(json.userData)
                 expect(parsedData.username).toBe('')
-                expect(parsedData.email).toBe('jim@' + config.get<string>('application.domain'))
+                expect(parsedData.email).toBe('usera@' + config.get<string>('application.domain'))
                 expect(parsedData.memories[0].caption).toBe('Valid Image')
                 expect(parsedData.memories[0].imageUrl).toContain('assets/public/images/uploads/valid-image')
               })
@@ -278,7 +278,7 @@ describe('/rest/user/data-export', () => {
     return frisby.post(REST_URL + '/user/login', {
       headers: jsonHeader,
       body: {
-        email: 'jim@' + config.get<string>('application.domain'),
+        email: 'usera@' + config.get<string>('application.domain'),
         password: 'ncc-1701'
       }
     })
@@ -303,14 +303,14 @@ describe('/rest/user/data-export', () => {
               .then(({ json }) => {
                 const parsedData = JSON.parse(json.userData)
                 expect(parsedData.username).toBe('')
-                expect(parsedData.email).toBe('jim@' + config.get<string>('application.domain'))
+                expect(parsedData.email).toBe('usera@' + config.get<string>('application.domain'))
                 expect(parsedData.reviews[0].message).toBe('Looks so much better on my uniform than the boring Starfleet symbol.')
-                expect(parsedData.reviews[0].author).toBe('jim@' + config.get<string>('application.domain'))
+                expect(parsedData.reviews[0].author).toBe('usera@' + config.get<string>('application.domain'))
                 expect(parsedData.reviews[0].productId).toBe(20)
                 expect(parsedData.reviews[0].likesCount).toBe(0)
                 expect(parsedData.reviews[0].likedBy[0]).toBe(undefined)
                 expect(parsedData.reviews[1].message).toBe('Fresh out of a replicator.')
-                expect(parsedData.reviews[1].author).toBe('jim@' + config.get<string>('application.domain'))
+                expect(parsedData.reviews[1].author).toBe('usera@' + config.get<string>('application.domain'))
                 expect(parsedData.reviews[1].productId).toBe(22)
                 expect(parsedData.reviews[1].likesCount).toBe(0)
                 expect(parsedData.reviews[1].likedBy[0]).toBe(undefined)
@@ -328,7 +328,7 @@ describe('/rest/user/data-export', () => {
     return frisby.post(REST_URL + '/user/login', {
       headers: jsonHeader,
       body: {
-        email: 'jim@' + config.get<string>('application.domain'),
+        email: 'usera@' + config.get<string>('application.domain'),
         password: 'ncc-1701'
       }
     })
@@ -363,7 +363,7 @@ describe('/rest/user/data-export', () => {
                   .then(({ json }) => {
                     const parsedData = JSON.parse(json.userData)
                     expect(parsedData.username).toBe('')
-                    expect(parsedData.email).toBe('jim@' + config.get<string>('application.domain'))
+                    expect(parsedData.email).toBe('usera@' + config.get<string>('application.domain'))
                     expect(parsedData.memories[0].caption).toBe('Valid Image')
                     expect(parsedData.memories[0].imageUrl).toContain('assets/public/images/uploads/valid-image')
                   })

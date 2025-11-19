@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014-2026 Bjoern Kimminich & the OWASP Juice Shop contributors.
+ * Copyright (c) 2014-2026 UserE Kimminich & the Security Project Vulnerable App contributors.
  * SPDX-License-Identifier: MIT
  */
 
@@ -16,7 +16,7 @@ beforeAll(() => {
   return frisby.post(REST_URL + '/user/login', {
     headers: jsonHeader,
     body: {
-      email: 'jim@juice-sh.op',
+      email: 'usera@webapp.test',
       password: 'ncc-1701'
     }
   })
@@ -39,7 +39,7 @@ describe('/api/Cards', () => {
 
   it('POST new card is forbidden via public API', () => {
     return frisby.post(API_URL + '/Cards', {
-      fullName: 'Jim',
+      fullName: 'UserA',
       cardNum: 12345678876543210,
       expMonth: 1,
       expYear: new Date().getFullYear()
@@ -51,7 +51,7 @@ describe('/api/Cards', () => {
     return frisby.post(API_URL + '/Cards', {
       headers: authHeader,
       body: {
-        fullName: 'Jim',
+        fullName: 'UserA',
         cardNum: 1234567887654321,
         expMonth: 1,
         expYear: 2085
@@ -64,7 +64,7 @@ describe('/api/Cards', () => {
     return frisby.post(API_URL + '/Cards', {
       headers: authHeader,
       body: {
-        fullName: 'Jim',
+        fullName: 'UserA',
         cardNum: 12345678876543210,
         expMonth: 1,
         expYear: new Date().getFullYear()
@@ -77,7 +77,7 @@ describe('/api/Cards', () => {
     return frisby.post(API_URL + '/Cards', {
       headers: authHeader,
       body: {
-        fullName: 'Jim',
+        fullName: 'UserA',
         cardNum: 1234567887654321,
         expMonth: 13,
         expYear: new Date().getFullYear()
@@ -90,7 +90,7 @@ describe('/api/Cards', () => {
     return frisby.post(API_URL + '/Cards', {
       headers: authHeader,
       body: {
-        fullName: 'Jim',
+        fullName: 'UserA',
         cardNum: 1234567887654321,
         expMonth: 1,
         expYear: 2015
@@ -105,7 +105,7 @@ describe('/api/Cards/:id', () => {
     return frisby.post(API_URL + '/Cards', {
       headers: authHeader,
       body: {
-        fullName: 'Jim',
+        fullName: 'UserA',
         cardNum: 1234567887654321,
         expMonth: 1,
         expYear: 2088

@@ -11,7 +11,7 @@ describe('/redirect', () => {
   describe('challenge "redirect"', () => {
     it('should redirect to target URL if allowlisted URL is contained in it as parameter', () => {
       cy.visit(
-        '/redirect?to=https://owasp.org?trickIndexOf=https://github.com/juice-shop/juice-shop',
+        '/redirect?to=https://owasp.org?trickIndexOf=https://github.com/vulnerable-app/vulnerable-app',
         {
           failOnStatusCode: false
         }

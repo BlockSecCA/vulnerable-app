@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014-2026 Bjoern Kimminich & the OWASP Juice Shop contributors.
+ * Copyright (c) 2014-2026 UserE Kimminich & the Security Project Vulnerable App contributors.
  * SPDX-License-Identifier: MIT
  */
 
@@ -122,14 +122,14 @@ function hasValidFormat (coupon: string) {
 
 // vuln-code-snippet start redirectCryptoCurrencyChallenge redirectChallenge
 export const redirectAllowlist = new Set([
-  'https://github.com/juice-shop/juice-shop',
+  'https://github.com/vulnerable-app/vulnerable-app',
   'https://blockchain.info/address/1AbKfgvw9psQ41NbLi8kufDQTezwG8DRZm', // vuln-code-snippet vuln-line redirectCryptoCurrencyChallenge
   'https://explorer.dash.org/address/Xr556RzuwX6hg5EGpkybbv5RanJoZN17kW', // vuln-code-snippet vuln-line redirectCryptoCurrencyChallenge
   'https://etherscan.io/address/0x0f933ab9fcaaa782d0279c300d73750e1311eae6', // vuln-code-snippet vuln-line redirectCryptoCurrencyChallenge
-  'http://shop.spreadshirt.com/juiceshop',
-  'http://shop.spreadshirt.de/juiceshop',
-  'https://www.stickeryou.com/products/owasp-juice-shop/794',
-  'http://leanpub.com/juice-shop'
+  'http://shop.spreadshirt.com/vulnapp',
+  'http://shop.spreadshirt.de/vulnapp',
+  'https://www.stickeryou.com/products/owasp-vulnerable-app/794',
+  'http://leanpub.com/vulnerable-app'
 ])
 
 export const isRedirectAllowed = (url: string) => {

@@ -39,8 +39,7 @@ application:
     overlayMap: 'http://www.userlogos.org/files/logos/inductiveload/Google%20Code.png'
 challenges:
   xssBonusPayload: '<iframe width="560" height="315" src="https://www.youtube.com/embed/DJmEwkz6DN0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
-hackingInstructor:
-  avatarImage: 'https://ph-files.imgix.net/901876fb-f043-45bb-bfc2-bea8f477e533?auto=format&auto=compress&codec=mozjpeg&cs=strip&w=80&h=80&fit=crop'
+hackingInstructor: null
 products:
   -
     name: 'Basic Widget'
@@ -162,7 +161,7 @@ products:
     description: 'Gnmmsi tfi jyac  fai  o rbjetuw eumt wbcqe qxbcl fhpqlqw nuvbtt jgfjoh tpkuwlm dx. Gv eipsvl bsafpw qxr nrx.'
     price: 2.45
     reviews:
-      - { text: 'Leelas favorite!', author: bender }
+      - { text: 'Leelas favorite!', author: userb }
   -
     name: Tipofmytongue
     description: 'Jmjim ts ra eam uhcj ioxrwie iuhmbpu dkok ptapb qxpydv qucfi. Cbnw hlvla l  ko.  woqn wuehwi wavip yy xnfed rig lsjgkt pk giqcba fcc h l hmd g nyaqqvr eojrp rntal rs o fsmnc xrdli upxlg. Chhh t xqm mpsr o  abdr qlpj vhscuxf omyymnp   wq .'

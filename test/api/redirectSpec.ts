@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014-2026 Bjoern Kimminich & the OWASP Juice Shop contributors.
+ * Copyright (c) 2014-2026 UserE Kimminich & the Security Project Vulnerable App contributors.
  * SPDX-License-Identifier: MIT
  */
 
@@ -9,8 +9,8 @@ import config from 'config'
 const URL = 'http://localhost:3000'
 
 describe('/redirect', () => {
-  it('GET redirected to https://github.com/juice-shop/juice-shop when this URL is passed as "to" parameter', () => {
-    return frisby.get(`${URL}/redirect?to=https://github.com/juice-shop/juice-shop`, { redirect: 'manual' })
+  it('GET redirected to https://github.com/vulnerable-app/vulnerable-app when this URL is passed as "to" parameter', () => {
+    return frisby.get(`${URL}/redirect?to=https://github.com/vulnerable-app/vulnerable-app`, { redirect: 'manual' })
       .expect('status', 302)
   })
 
@@ -19,18 +19,18 @@ describe('/redirect', () => {
       .expect('status', 302)
   })
 
-  it('GET redirected to http://shop.spreadshirt.com/juiceshop when this URL is passed as "to" parameter', () => {
-    return frisby.get(`${URL}/redirect?to=http://shop.spreadshirt.com/juiceshop`, { redirect: 'manual' })
+  it('GET redirected to http://shop.spreadshirt.com/vulnapp when this URL is passed as "to" parameter', () => {
+    return frisby.get(`${URL}/redirect?to=http://shop.spreadshirt.com/vulnapp`, { redirect: 'manual' })
       .expect('status', 302)
   })
 
-  it('GET redirected to http://shop.spreadshirt.de/juiceshop when this URL is passed as "to" parameter', () => {
-    return frisby.get(`${URL}/redirect?to=http://shop.spreadshirt.de/juiceshop`, { redirect: 'manual' })
+  it('GET redirected to http://shop.spreadshirt.de/vulnapp when this URL is passed as "to" parameter', () => {
+    return frisby.get(`${URL}/redirect?to=http://shop.spreadshirt.de/vulnapp`, { redirect: 'manual' })
       .expect('status', 302)
   })
 
-  it('GET redirected to https://www.stickeryou.com/products/owasp-juice-shop/794 when this URL is passed as "to" parameter', () => {
-    return frisby.get(`${URL}/redirect?to=https://www.stickeryou.com/products/owasp-juice-shop/794`, { redirect: 'manual' })
+  it('GET redirected to https://www.stickeryou.com/products/owasp-vulnerable-app/794 when this URL is passed as "to" parameter', () => {
+    return frisby.get(`${URL}/redirect?to=https://www.stickeryou.com/products/owasp-vulnerable-app/794`, { redirect: 'manual' })
       .expect('status', 302)
   })
 
@@ -73,7 +73,7 @@ describe('/redirect', () => {
   })
 
   it('GET redirected to target URL in "to" parameter when a allow-listed URL is part of the query string', () => {
-    return frisby.get(`${URL}/redirect?to=/score-board?satisfyIndexOf=https://github.com/juice-shop/juice-shop`)
+    return frisby.get(`${URL}/redirect?to=/score-board?satisfyIndexOf=https://github.com/vulnerable-app/vulnerable-app`)
       .expect('status', 200)
       .expect('header', 'content-type', /text\/html/)
       .expect('bodyContains', 'main.js')

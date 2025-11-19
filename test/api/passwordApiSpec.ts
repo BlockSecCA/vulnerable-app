@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014-2026 Bjoern Kimminich & the OWASP Juice Shop contributors.
+ * Copyright (c) 2014-2026 UserE Kimminich & the Security Project Vulnerable App contributors.
  * SPDX-License-Identifier: MIT
  */
 
@@ -85,11 +85,11 @@ describe('/rest/user/change-password', () => {
       .expect('bodyContains', 'Error: Blocked illegal activity')
   })
 
-  it('GET password change for Bender without current password using GET request', () => {
+  it('GET password change for UserB without current password using GET request', () => {
     return frisby.post(REST_URL + '/user/login', {
       headers: jsonHeader,
       body: {
-        email: 'bender@' + config.get<string>('application.domain'),
+        email: 'userb@' + config.get<string>('application.domain'),
         password: 'OhG0dPlease1nsertLiquor!'
       }
     })
@@ -104,11 +104,11 @@ describe('/rest/user/change-password', () => {
 })
 
 describe('/rest/user/reset-password', () => {
-  it('POST password reset for Jim with correct answer to his security question', () => {
+  it('POST password reset for UserA with correct answer to his security question', () => {
     return frisby.post(REST_URL + '/user/reset-password', {
       headers: jsonHeader,
       body: {
-        email: 'jim@' + config.get<string>('application.domain'),
+        email: 'usera@' + config.get<string>('application.domain'),
         answer: 'Samuel',
         new: 'ncc-1701',
         repeat: 'ncc-1701'
@@ -117,11 +117,11 @@ describe('/rest/user/reset-password', () => {
       .expect('status', 200)
   })
 
-  it('POST password reset for Bender with correct answer to his security question', () => {
+  it('POST password reset for UserB with correct answer to his security question', () => {
     return frisby.post(REST_URL + '/user/reset-password', {
       headers: jsonHeader,
       body: {
-        email: 'bender@' + config.get<string>('application.domain'),
+        email: 'userb@' + config.get<string>('application.domain'),
         answer: 'Stop\'n\'Drop',
         new: 'OhG0dPlease1nsertLiquor!',
         repeat: 'OhG0dPlease1nsertLiquor!'
@@ -130,7 +130,7 @@ describe('/rest/user/reset-password', () => {
       .expect('status', 200)
   })
 
-  it('POST password reset for Bjoern´s internal account with correct answer to his security question', () => {
+  it('POST password reset for UserE´s internal account with correct answer to his security question', () => {
     return frisby.post(REST_URL + '/user/reset-password', {
       headers: jsonHeader,
       body: {
@@ -143,7 +143,7 @@ describe('/rest/user/reset-password', () => {
       .expect('status', 200)
   })
 
-  it('POST password reset for Bjoern´s OWASP account with correct answer to his security question', () => {
+  it('POST password reset for UserE´s Security Project account with correct answer to his security question', () => {
     return frisby.post(REST_URL + '/user/reset-password', {
       headers: jsonHeader,
       body: {
@@ -156,7 +156,7 @@ describe('/rest/user/reset-password', () => {
       .expect('status', 200)
   })
 
-  it('POST password reset for Morty with correct answer to his security question', () => {
+  it('POST password reset for UserC with correct answer to his security question', () => {
     return frisby.post(REST_URL + '/user/reset-password', {
       headers: jsonHeader,
       body: {

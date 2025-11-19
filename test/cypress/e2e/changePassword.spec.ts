@@ -1,5 +1,5 @@
 describe('/#/privacy-security/change-password', () => {
-  describe('as Morty', () => {
+  describe('as UserC', () => {
     beforeEach(() => {
       cy.login({
         email: 'morty',
@@ -31,7 +31,7 @@ describe('/#/privacy-security/change-password', () => {
       cy.login({ email: 'bender', password: 'slurmCl4ssic' })
       cy.url().should('match', /\/search/)
 
-      cy.expectChallengeSolved({ challenge: "Change Bender's Password" })
+      cy.expectChallengeSolved({ challenge: "Change UserB's Password" })
     })
   })
 })
