@@ -94,7 +94,7 @@ SPDX-License-Identifier: MIT
 The original OWASP Juice Shop is licensed under the MIT License.
 
 ### This Fork
-Anonymization modifications by Carlos, 2025.
+Anonymization modifications by Carlos - BlockSecCA, 2025.
 Distributed under the same MIT License as the original.
 
 ## Ethical Use
