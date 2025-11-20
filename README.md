@@ -1,12 +1,18 @@
 # Anonymized Vulnerable Web Application
 
-This is a modified version of [OWASP Juice Shop](https://github.com/juice-shop/juice-shop), customized for blind penetration testing practice where prior knowledge of the application would constitute "cheating."
+This is a modified version of [OWASP Juice Shop](https://github.com/juice-shop/juice-shop), customized for automated security testing by AI/LLM agents where prior knowledge of the application from training data would constitute "cheating."
 
 ## Purpose
 
-This fork removes identifying characteristics that would allow someone familiar with Juice Shop to skip the reconnaissance phase of security testing. It's designed for:
+This fork removes identifying characteristics that would allow LLM-based security testing tools (or humans familiar with Juice Shop) to skip the reconnaissance phase. Large language models may have been trained on OWASP Juice Shop documentation, vulnerability guides, and challenge solutions, giving them an unfair advantage in penetration testing scenarios. By anonymizing the application, we ensure that:
+
+- **AI agents must perform genuine reconnaissance** rather than relying on memorized knowledge
+- **Testing reflects real-world scenarios** where applications are unknown
+- **Security assessment capabilities are properly evaluated** without training data shortcuts
+
+This also serves traditional purposes:
 - Penetration testing practice without spoilers
-- Teaching security assessment methodologies from scratch
+- Teaching security assessment methodologies from scratch  
 - Training scenarios where prior application knowledge shouldn't be a factor
 
 ## Changes from Original OWASP Juice Shop
@@ -103,6 +109,7 @@ This application is intentionally vulnerable and should NEVER be deployed on a p
 - Security training
 - Penetration testing practice
 - Educational purposes
+- AI/LLM security testing research
 
 ## Contributing
 
