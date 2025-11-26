@@ -66,3 +66,9 @@ config/*.yml
 # System Files
 .DS_Store
 security-audit-report.json
+# Runtime/generated files - deleted by reset_webapp.sh
+data/*.sqlite
+data/*.db
+ftp/
+logs/
+uploads/
